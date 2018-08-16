@@ -1,0 +1,9 @@
+<div>
+
+<div *ngFor="let item of products">
+  {{item | json}}
+</div>
+<p>Total price: {{getTotalPrice()}}</p>
+
+</div>
+<div *ngIf="getTotalPrice() === 0">Cart is empty</div>
