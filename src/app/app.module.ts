@@ -4,16 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ProductComponentComponent } from './product-component/product-component.component';
 import { ProductService } from './product.service';
-import { CartComponent } from './cart/cart.component';
+import { CartModule } from './cart/cart.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponentComponent,
-    CartComponent
+    ProductComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CartModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
