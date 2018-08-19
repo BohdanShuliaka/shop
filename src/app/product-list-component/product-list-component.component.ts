@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { ProductService } from '../product.service';
+import { ProductService } from '../services/product.service';
 import { Product } from '../product.model';
-import { CartService } from '../cart.service';
+import { CartService } from '../services/cart.service';
 
 enum myEnum {
   First = 'free',
@@ -10,18 +10,16 @@ enum myEnum {
   Fourth,
 }
 @Component({
-  selector: 'app-product-component',
-  templateUrl: './product-component.component.html',
-  styleUrls: ['./product-component.component.css']
+  selector: 'app-product-list-component',
+  templateUrl: './product-list-component.component.html',
+  styleUrls: ['./product-list-component.component.css']
 })
-export class ProductComponentComponent implements OnInit {
-  @Output() addProduct: EventEmitter<Product> = new EventEmitter<Product>();
+export class ProductListComponentComponent implements OnInit {
 
-
-  name: string = 'My Shop';
-  description: string = 'My first in history Angular 6 shop project';
-  price: number = 10000;
-  isAvailable: boolean = true;
+  name = 'My Shop';
+  description = 'My first in history Angular 6 shop project';
+  price = 10000;
+  isAvailable = true;
   category = myEnum;
 
   product: Product;
@@ -40,6 +38,7 @@ export class ProductComponentComponent implements OnInit {
     console.log('Product has been bought!');
 }
   onAddToCart(product: Product): void {
+    console.log(product);
     this.productService.removeProduct(product);
     this.cartService.addProductToCart(product);
   }

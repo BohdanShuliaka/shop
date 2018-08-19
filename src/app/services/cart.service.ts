@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Product } from './product.model';
+import { Product } from '../product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +22,8 @@ export class CartService {
     this.cartProducts.push(product);
     console.log('product added');
   }
-
+  removeProductFromCart(product: Product): void {
+    const ind = this.cartProducts.findIndex((item) => item.productId === product.productId);
+    this.cartProducts.splice(ind, 1);
+  }
 }

@@ -11,4 +11,3 @@
       this.isAvailable = isAvailable || false;
     }
   }
-  

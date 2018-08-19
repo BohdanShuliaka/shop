@@ -1,0 +1,9 @@
+<div>
+  <ul >
+    <li>Name: {{product.item}}</li>
+    <li>Price: {{product.price}} $</li>
+    <li>Product id:{{product.productId}}</li>
+    <li>In store: {{product.isAvailable ? 'available' : 'not in stock'}}</li>
+    <button (click)="onAddToCart(product)" [disabled]="!product.isAvailable">Add to cart</button>
+  </ul>
+</div>

@@ -6,15 +6,12 @@
  <div>{{category.First}}</div> 
  <button (click)="onBuy($event)" >Buy</button>
 
- <div>
-  <ul *ngFor="let product of products">
-    <li>Name: {{product.item}}</li>
-    <li>Price: {{product.price}} $</li>
-    <li>Product id:{{product.productId}}</li>
-    <li>In store: {{product.isAvailable ? 'available' : 'not in stock'}}</li>
-    <button (click)="onAddToCart(product)" [disabled]="!product.isAvailable">Add to cart</button>
-  </ul>
-</div>
+ <app-product 
+ *ngFor="let product of products"
+ [product] = "product"
+ (addProduct) =  "onAddToCart($event)"
+ ></app-product>
+
 </div>
 
 <!-- 
