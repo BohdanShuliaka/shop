@@ -15,8 +15,8 @@ export class BackgroundDirective {
     this.backgroundChange(this.color)
   }
   private backgroundChange(color: string) {
-    console.log(this.el.nativeElement.children[0]);
-    // this.render.setStyle(this.el.nativeElement, 'backgroundColor', color);
-    this.render.setStyle(this.el.nativeElement.children[0], 'backgroundColor', color)
+    console.log(this.el.nativeElement);
+     this.render.setStyle(this.el.nativeElement, 'backgroundColor', color);
+    //this.render.setStyle(this.el.nativeElement.children[0], 'backgroundColor', color)
   }
 }
