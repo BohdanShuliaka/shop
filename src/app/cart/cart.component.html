@@ -2,20 +2,22 @@
 
 <div >
   <!-- {{item | json}} -->
-  <table *ngIf="getTotalPrice() !== 0">
+  <table *ngIf="getTotalPrice() !== 0" class="table table-striped">
     <thead>Product Cart</thead>
     <tr>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th></th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col"></th>
+        <tbody>
     </tr>
-    <app-cart-item 
+    <tr app-cart-item 
     *ngFor="let item of products"
     [product] = "item"
     (remove) = "onRemoveFromCart($event)"
     appBackground = 'lightblue'
-    ></app-cart-item>
+    ></tr>
+    </tbody>
   </table>
 </div>
 <p>Total price: {{getTotalPrice()}}</p>

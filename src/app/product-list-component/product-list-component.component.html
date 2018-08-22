@@ -1,17 +1,11 @@
-<div>
- <div>{{name}}</div> 
- <div>{{description}}</div> 
- <div>{{price}}</div> 
- <div>{{isAvailable ? 'Open' : 'Closed'}}</div>
- <div>{{category.First}}</div> 
- <button (click)="onBuy($event)" >Buy</button>
-
+<div class="container">
+  <div class="row justify-content-start">
  <app-product 
  *ngFor="let product of products"
  [product] = "product"
  (addProduct) =  "onAddToCart($event)"
  ></app-product>
-
+  </div>
 </div>
 
 <!-- 

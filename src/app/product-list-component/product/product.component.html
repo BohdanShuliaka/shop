@@ -1,9 +1,15 @@
-<div>
-  <ul >
-    <li>Name: {{product.item}}</li>
-    <li>Price: {{product.price}} $</li>
-    <li>Product id:{{product.productId}}</li>
-    <li>In store: {{product.isAvailable ? 'available' : 'not in stock'}}</li>
-    <button (click)="onAddToCart(product)" [disabled]="!product.isAvailable">Add to cart</button>
-  </ul>
+
+<div class="col">
+<div class="panel panel-default">
+    <div class="panel-heading">Product</div>
+    <div class="panel-body">
+        <ul >
+            <li>Name: {{product.item}}</li>
+            <li>Price: {{product.price}} $</li>
+            <li>Product id:{{product.productId}}</li>
+            <li>In store: {{product.isAvailable ? 'available' : 'not in stock'}}</li>
+            <button class="btn btn-primary btn-sm" (click)="onAddToCart(product)" [disabled]="!product.isAvailable">Add to cart</button>
+          </ul>
+    </div>
+  </div>
 </div>

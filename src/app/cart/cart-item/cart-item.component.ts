@@ -2,7 +2,7 @@ import { Product } from './../../product.model';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-cart-item',
+  selector: '[app-cart-item]',
   templateUrl: './cart-item.component.html',
   styleUrls: ['./cart-item.component.css']
 })

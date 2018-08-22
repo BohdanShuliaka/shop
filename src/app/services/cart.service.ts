@@ -15,7 +15,8 @@ export class CartService {
   }
 
   getSumm(): number {
-    return this.cartProducts.reduce((accum: number, item: Product) => accum + item.price, 0);
+    let sum = this.cartProducts.reduce((accum: number, item: Product) => accum + item.price, 0);
+    return +sum.toFixed(2);
   }
 
   addProductToCart(product: Product): void {
