@@ -22,14 +22,18 @@ export class CartComponent implements OnInit {
 
   onRemoveFromCart(product: Product): void {
     this.cartService.removeProductFromCart(product);
-    this.productService.addProduct(product);
+
 
   }
   getTotalPrice(): number {
     return this.cartService.getSumm();
   }
   getQuantity(): number {
-    return this.products.length;
+    return this.cartService.getQuantity();
+  }
+  qntyChange(event) {
+    // console.log(event);
+    this.cartService.updateCartQnty(event);
   }
 
 }

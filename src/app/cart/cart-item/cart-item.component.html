@@ -1,7 +1,13 @@
 <ng-container>
     <td>{{product.item}}</td>
     <td>{{product.price}}</td>
-    <td>{{amount}}</td>
+    <td>
+        <span *ngIf="!isChangeable">{{product.qnty}}</span>
+        <input type="text" *ngIf="isChangeable" #input>
+        <button *ngIf="buttonIsVisible" (click)="onQntyChange()">Change</button>
+        <button *ngIf="!buttonIsVisible" (click)="onQntySave(product.productId)">Save</button>
+        <button *ngIf="!buttonIsVisible" (click)="onQntyChange()">Cancel</button>
+    </td>
     <td>
         <button (click)="onRemove(product)">Remove</button>
     </td>

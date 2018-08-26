@@ -5,8 +5,8 @@ import { Directive, Input, ElementRef, HostListener, Renderer2 } from '@angular/
 })
 export class BackgroundDirective {
   @Input('appBackground') color: string;
- 
-  
+
+
   constructor(private el: ElementRef, private render: Renderer2) {
   }
   @HostListener('click')

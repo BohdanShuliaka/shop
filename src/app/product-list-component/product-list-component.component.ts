@@ -16,11 +16,6 @@ enum myEnum {
 })
 export class ProductListComponentComponent implements OnInit {
 
-  name = 'My Shop';
-  description = 'My first in history Angular 6 shop project';
-  price = 10000;
-  isAvailable = true;
-  category = myEnum;
 
   product: Product;
   products: Array<Product>;
@@ -38,8 +33,7 @@ export class ProductListComponentComponent implements OnInit {
     console.log('Product has been bought!');
 }
   onAddToCart(product: Product): void {
-    console.log(product);
-    this.productService.removeProduct(product);
+    console.log('product-list component', product);
     this.cartService.addProductToCart(product);
   }
 

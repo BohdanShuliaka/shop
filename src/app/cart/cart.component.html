@@ -15,6 +15,7 @@
     *ngFor="let item of products"
     [product] = "item"
     (remove) = "onRemoveFromCart($event)"
+    (qntyChange) = "qntyChange($event)"
     appBackground = 'lightblue'
     ></tr>
     </tbody>
