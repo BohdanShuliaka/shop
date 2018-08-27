@@ -70,5 +70,7 @@ export class CartService {
       this.cartProducts.splice(ind, 1);
 
       this.cartProducts.push(itemInCart);
+
+      this.getQuantity();
   }
 }

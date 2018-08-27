@@ -2,3 +2,6 @@ tr {
     margin: 0 auto;
     width: 100%;
 }
+.change-btn {
+    margin-left: 20px;
+}

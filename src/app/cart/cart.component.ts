@@ -34,6 +34,7 @@ export class CartComponent implements OnInit {
   qntyChange(event) {
     // console.log(event);
     this.cartService.updateCartQnty(event);
+
   }
 
 }
