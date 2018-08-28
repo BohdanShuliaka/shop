@@ -59,7 +59,7 @@ export class CartService {
     console.log(this.cartProducts);
   }
   clearCart() {
-
+    this.cartProducts = [];
   }
   updateCartQnty(data): void {
     console.log('last instance', data);
