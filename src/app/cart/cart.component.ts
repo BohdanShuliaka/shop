@@ -36,5 +36,8 @@ export class CartComponent implements OnInit {
     this.cartService.updateCartQnty(event);
 
   }
+  clearCart() {
+    this.cartService.clearCart();
+  }
 
 }

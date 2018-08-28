@@ -7,7 +7,7 @@ export class GeneratorService {
 
   constructor() { }
 
-  makeid(n) {
+  makeid(n): string {
     let text = '';
     const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 

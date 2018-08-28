@@ -30,7 +30,7 @@ export class CartService {
   }
   calculateQuantity(): void {
     const qnty = this.cartProducts.reduce((accum: number, item: Product) => accum + item.qnty, 0);
-    this.totalQnty = +qnty.toFixed(2);
+    this.totalQnty = +qnty;
   }
   addProductToCart(product: Product): void {
     const alreadyIn =  this.cartProducts.includes(product);
@@ -59,7 +59,7 @@ export class CartService {
     console.log(this.cartProducts);
   }
   clearCart() {
-    this.cartProducts = [];
+
   }
   updateCartQnty(data): void {
     console.log('last instance', data);

@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { ProductService } from './services/product.service';
 import { CartModule } from './cart/cart.module';
 import { ProductComponentModule } from './product-list-component/product-list-component.module';
 import { SharedModule } from './shared/shared.module';
@@ -18,7 +17,7 @@ import { SharedModule } from './shared/shared.module';
     ProductComponentModule,
     SharedModule
   ],
-  providers: [ProductService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
